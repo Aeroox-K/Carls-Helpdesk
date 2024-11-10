@@ -1,0 +1,25 @@
+{
+  "tickets": [
+    {
+      "id": "1",
+      "title": "Fix the footer links please",
+      "body": "Currently, the footer links on our website are non-functional, which has resulted in a frustrating experience for our users. The links, which are supposed to direct visitors to essential pages such as the Privacy Policy, Terms of Service, and Contact Information, are either broken or lead to incorrect destinations. This issue not only hampers user navigation but also raises concerns about the transparency and reliability of our website. It is imperative that we address this problem promptly to restore user trust and ensure that visitors can easily access vital information without encountering errors. I kindly request that you investigate the source of this issue and implement the necessary fixes at your earliest convenience to enhance the overall user experience.",
+      "priority": "low",
+      "user_email": "mario@netninja.dev"
+    },
+    {
+      "id": "2",
+      "title": "Add in a new stylesheet",
+      "body": "In our ongoing efforts to improve the aesthetic appeal and usability of our website, we are looking to implement a new stylesheet. The current design is beginning to feel outdated and does not align with modern web design trends. A fresh, well-structured stylesheet will not only enhance the visual elements of our site but also improve user engagement and satisfaction. It is essential that the new stylesheet incorporates responsive design principles to ensure that our website looks great on all devices, from desktops to smartphones. Additionally, we would like the new styles to reflect our brand identity more accurately, using our established color palette and typography. Please prioritize this task, as a visually appealing website is crucial for attracting and retaining users.",
+      "priority": "medium",
+      "user_email": "mario@netninja.dev"
+    },
+    {
+      "id": "3",
+      "title": "Fix the footer links",
+      "body": "The footer links on our website are currently malfunctioning, which has been a significant source of frustration for our users. When users attempt to click on these links, they are often met with error messages, such as 404 pages, or the links simply do not respond at all. This issue is particularly concerning as it prevents users from accessing important information that is typically found in the footer, such as our Privacy Policy, Terms of Service, and other critical resources. The inability to navigate to these pages not only affects user experience but also raises concerns about our site's reliability and professionalism. It is crucial that we address this issue with urgency, as it directly impacts user trust and satisfaction. I urge you to prioritize this matter and take the necessary steps to investigate and resolve the broken footer links as soon as possible.",
+      "priority": "high",
+      "user_email": "peach@netninja.dev"
+    } 
+  ]
+}
