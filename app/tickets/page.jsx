@@ -9,12 +9,12 @@ export default function Tickets() {
       <main>
          <nav className="flex flex-row pt-5 px-0 justify-between" >
           <div>
-            <h2 className="text-3xl">Tickets</h2>
-            <p><small>Currently open tickets</small></p>
+            <h2 className="md:text-3xl text-xl">Tickets</h2>
+            <p><small className="md:text-sm text-xs">Currently open tickets</small></p>
           </div>
 
-          <button className="btn-primary">
-          <Link href="/tickets/create"><p className="text-white flex items-center">Create a Ticket<FileInput className="ml-2 h-4 w-4" /></p></Link>
+          <button className=" bg-primary p-4 text-white">
+          <Link href="/tickets/create"><p className="text-white flex text-sm items-center">Create a Ticket<FileInput className="ml-2 h-4 w-4" /></p></Link>
           </button>
          </nav>
 

@@ -17,10 +17,12 @@ export default function Home() {
 
     <div className="card">
       <h3>Welcome Emily Smith to the Support Team!</h3>
+      <small>New Customer Support Specialist</small>
       <p>We are thrilled to announce that Emily Smith has joined our support team as a Customer Support Specialist. Emily comes to us with over 5 years of experience in customer service and technical support, having worked with various organizations to enhance their customer engagement strategies. In her role, she will be responsible for assisting our clients with their inquiries, troubleshooting issues, and providing expert guidance on our products and services. Emily is passionate about helping customers and believes in fostering positive relationships through effective communication and problem-solving. We are excited to have her on board, and we know she will be a valuable asset to our team and our clients.</p>
     </div>
     <div className="card">
       <h3>New Helpdesk Software Implementation</h3>
+      <small>Enhancing our support services</small>
       <p>We are pleased to inform you that we have successfully implemented a new helpdesk software designed to enhance our support services significantly. This cutting-edge platform will allow us to streamline ticket management, improve response times, and provide a more organized workflow for our support team. With features such as automated ticket routing, a comprehensive knowledge base, and real-time reporting, we are confident that this upgrade will lead to a more efficient support experience for you. To ensure everyone is well-acquainted with the new system, we will be hosting training sessions over the next few weeks. These sessions will cover the new features, tips on how to submit tickets effectively, and best practices for using the knowledge base. We encourage all users to participate and make the most of the tools available to you!</p>
     </div>
   </main>
