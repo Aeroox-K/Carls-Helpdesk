@@ -3,8 +3,12 @@ import {
     getFirestore, collection, getDocs
 } from 'firebase/firestore'
 
+require('dotenv').config();
+
+console.log(process.env);
+
 const firebaseConfig = {
-    apiKey: "AIzaSyCAx42BwK0YDNGreJwTaTXIJ7FQqqYK218",
+    apiKey: process.env.API_KEY,
     authDomain: "carls-helpdesk.firebaseapp.com",
     projectId: "carls-helpdesk",
     storageBucket: "carls-helpdesk.firebasestorage.app",

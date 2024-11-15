@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.19",
+    "dotenv": "^16.4.5",
+    "env": "^0.0.2",
     "eslint": "8.57.0",
     "eslint-config-next": "14.1.4",
     "firebase": "^11.0.1",
