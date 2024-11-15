@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation";
 import { db } from "../../utils/firebaseConfig"; 
 import { doc, deleteDoc } from "firebase/firestore";
+import { Trash2 } from "lucide-react";
 
  export default function DeleteTicket ({ id })  {
     const router = useRouter();
@@ -23,7 +24,7 @@ import { doc, deleteDoc } from "firebase/firestore";
 
     return (
         <button className="btn-delete" onClick={handleDelete}>
-            <p className="text-white">Delete Ticket</p>
+            <p className="text-white flex items-center">Delete Ticket <Trash2 className="ml-2 h-4 w-4" /></p>
         </button>
     );
 };

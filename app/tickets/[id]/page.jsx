@@ -28,7 +28,7 @@ export default function TicketDetails({ params }) {
     return (
         <main>
             <nav>
-                <h2 className="md:-ml-16 -ml-2">Tickets Details</h2>
+                <h2 className="md:-ml-16 -ml-2 text-2xl ">Tickets Details</h2>
             </nav>
 
             <Suspense fallback={<Loading />}>

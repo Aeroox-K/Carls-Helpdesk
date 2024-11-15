@@ -1,18 +1,19 @@
 import Link from "next/link";
+import { ArrowRight, Bell, Book } from 'lucide-react'
 
 export default function Home() {
   return (
-    <main>
-    {/* <h2>Dashboard</h2> */}
-    <p className="leading-7">Welcome to Carls Helpdesk Dashboard! This is your central hub for managing all support-related activities. Here, you can easily track the status of your support tickets, access a wealth of resources, and stay informed about the latest updates from our team. Our dedicated support staff is committed to providing you with timely and effective assistance, ensuring that any issues you encounter are resolved swiftly and satisfactorily. We encourage you to utilize the tools available to you and reach out if you need help navigating through any challenges.</p>
+    <main className="mt-20">
+    <h2 className="text-3xl" >Welcome to Carls Helpdesk Dashboard</h2>
+    <p className="leading-8 text-base">This is your central hub for managing all support-related activities. Here, you can easily track the status of your support tickets, access a wealth of resources, and stay informed about the latest updates from our team. Our dedicated support staff is committed to providing you with timely and effective assistance, ensuring that any issues you encounter are resolved swiftly and satisfactorily. We encourage you to utilize the tools available to you and reach out if you need help navigating through any challenges.</p>
 
     <div className="flex justify-center my-8 ">
       <Link href="/tickets">
-        <button className="btn-primary">View Tickets</button>
+        <button className="btn-primary">View Tickets <ArrowRight className="ml-2 h-4 w-4" /></button>
       </Link>
     </div>
 
-    <h2 className="mt-24">Company Updates</h2>
+    <h2 className="mt-24 text-2xl">Company Updates</h2>
 
     <div className="card">
       <h3>Welcome Emily Smith to the Support Team!</h3>

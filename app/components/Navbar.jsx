@@ -18,12 +18,12 @@ export default function Home() {
         </Link>
 
         <div className='md:visible max-md:hidden' >
-        <Link href="/"><h1>Carls Helpdesk</h1></Link>
+        <Link href="/"><h1 className='text-2xl'>Carls Helpdesk</h1></Link>
         </div>
 
        </div>
 
-        <div className='flex md:gap-14 gap-5 md:mr-10 mr-5 font-semibold'>
+        <div className='flex md:gap-14 gap-5 md:mr-10 mr-5 font-semibold text-xl'>
         <Link href="/">Dashboard</Link>
         <Link href="/tickets">Tickets</Link>
         </div>

@@ -47,7 +47,7 @@ export default function CreateForm() {
 
 
   return (
-    <form onSubmit={handleSubmit} className="w-1/2">     
+    <form onSubmit={handleSubmit} className="w-1/2 p-10">     
         <label>
             <span>Title:</span>
             <input 
@@ -55,6 +55,8 @@ export default function CreateForm() {
             type="text" 
             onChange={(e) => setTitle(e.target.value)}
             value={title}
+            className="py-3"
+
             />
         </label>
         <label>
@@ -64,6 +66,7 @@ export default function CreateForm() {
                 required
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
+                className="py-10"
             />
         </label>
         <label>
@@ -71,6 +74,7 @@ export default function CreateForm() {
             <select 
                 onChange={(e) => setPriority(e.target.value)}
                 value={priority}
+                className="py-3"
             >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -82,7 +86,7 @@ export default function CreateForm() {
 
         <button
         type="submit"
-        className="btn-primary"
+        className="btn-primary mt-10"
         disabled = {!isLoading}
         >
             {!isLoading && <span>Adding...</span>}
