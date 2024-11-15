@@ -1,7 +1,24 @@
 "use client"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
+import { collection, addDoc, serverTimestamp } from "firebase/firestore"
+import { db } from "../../../utils/firebaseConfig"
 
+async function addTickets(title, body, priority) {
+    try {
+        const docRef = await addDoc(collection(db, "tickets"), {
+          title: title,
+          body: body,
+          priority: priority,
+          createdAt: serverTimestamp(),
+        });
+        console.log("Tickets by", docRef.id);
+        return true;
+    } catch (error) {
+        console.log("Error adding Ticket", error)
+        return false;
+    }
+}
 
 export default function CreateForm() {
     const router = useRouter()
@@ -15,25 +32,22 @@ export default function CreateForm() {
         e.preventDefault()
         setIsLoading(true)
 
-        const ticket = {
-            title, body, priority, user_email: "johnmark@email.com"
-        }
+        const added = await addTickets(title, body, priority)
+            if (added) {
+                setTitle("");
+                setBody("");
+                setPriority("");
+                router.refresh
+                router.push('/tickets')
 
-        const res = await fetch ('http://localhost:4000/tickets', {
-            method: 'POST',
-            headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(ticket)
-        })
 
-        if (res.status === 201) {
-            router.refresh
-            router.push('/tickets')
-        }
+                // alert ('ticket added to firestore db')
+            }
     }
 
 
   return (
-    <form onSubmit={handleSubmit} className="w-1/2">
+    <form onSubmit={handleSubmit} className="w-1/2">     
         <label>
             <span>Title:</span>
             <input 
@@ -46,6 +60,7 @@ export default function CreateForm() {
         <label>
             <span>Body:</span>
             <textarea
+                type= "text"
                 required
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
@@ -63,7 +78,10 @@ export default function CreateForm() {
             </select>
         </label>
 
+
+
         <button
+        type="submit"
         className="btn-primary"
         disabled = {!isLoading}
         >

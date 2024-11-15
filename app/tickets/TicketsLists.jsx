@@ -1,21 +1,28 @@
+'use client'
 import Link from "next/link"
+import { db,  } from "../../utils/firebaseConfig"
+import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
+import { useEffect, useState } from "react";
 
-async function getTickets() {
-    //imitate delay
-    await new Promise(resolve => setTimeout(resolve, 3000))
 
-    const res = await fetch('http://localhost:4000/tickets', {
-        next: {
-            revalidate: 0
+export default function TicketsLists() {
+
+    const [tickets, setTickets] = useState([]);
+
+    const colRef = collection(db, 'tickets')
+
+    const q = query(colRef, orderBy("createdAt", "desc") )
+
+
+    useEffect(() => {
+        const getTickets = async () => {
+            onSnapshot(q, (snapshot) => {
+                setTickets(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id})))
+            })
         }
-    })
+        getTickets() 
+    }, []) 
 
-    return res.json()
-}   
-
-
-export default async function TicketsLists() {
-    const tickets = await getTickets()
 
   return ( 
    <>

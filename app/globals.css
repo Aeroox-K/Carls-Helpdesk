@@ -57,6 +57,9 @@ body {
   .btn-secondary {
     @apply bg-gray-200 text-gray-900;
   }
+  .btn-delete {
+    @apply bg-red-600
+  }
   
   /* form styles */
   form {
