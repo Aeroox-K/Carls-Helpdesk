@@ -39,9 +39,6 @@ export default function CreateForm() {
                 setPriority("");
                 router.refresh
                 router.push('/tickets')
-
-
-                // alert ('ticket added to firestore db')
             }
     }
 
@@ -66,7 +63,7 @@ export default function CreateForm() {
                 required
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
-                className="py-10"
+                className="h-32"
             />
         </label>
         <label>
@@ -74,7 +71,7 @@ export default function CreateForm() {
             <select 
                 onChange={(e) => setPriority(e.target.value)}
                 value={priority}
-                className="py-3"
+                className="py-3 bg-white"
             >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
