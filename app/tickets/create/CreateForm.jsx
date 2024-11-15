@@ -52,7 +52,7 @@ export default function CreateForm() {
             type="text" 
             onChange={(e) => setTitle(e.target.value)}
             value={title}
-            className="py-3"
+            className="h-12 outline-none"
 
             />
         </label>
@@ -63,7 +63,7 @@ export default function CreateForm() {
                 required
                 onChange={(e) => setBody(e.target.value)}
                 value={body}
-                className="h-32"
+                className="h-32 outline-none"
             />
         </label>
         <label>
@@ -71,7 +71,7 @@ export default function CreateForm() {
             <select 
                 onChange={(e) => setPriority(e.target.value)}
                 value={priority}
-                className="py-3 bg-white"
+                className="h-12 bg-white outline-none"
             >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
